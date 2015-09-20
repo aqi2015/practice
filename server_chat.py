@@ -32,9 +32,9 @@ def handler(conn, addr):
 				Chat_user.user_conn[name] = conn
 				myname['myname'] = name
 				return True
-		else:
-			conn.sendall('用户名或密码错误!\n')
-			return False
+
+		conn.sendall('用户名或密码错误!\n')
+		return False
 
 	def register(myname):
 		conn.sendall('新用户注册\n')
